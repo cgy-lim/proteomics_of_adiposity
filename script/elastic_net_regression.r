@@ -55,6 +55,8 @@ elastic_model_bmi <- train(bmi ~ .,
 best_model_bmi <- as.data.frame(as.matrix(coef(elastic_model_bmi$finalModel, elastic_model_bmi$bestTune$lambda)))
 bmi_signature<-cbind(seq = rownames(best_model_bmi), best_model_bmi)
 colnames(bmi_signature) <- c("protein_id","beta")
+
+dir.create("output") #create output folder if it does not already exist
 write.csv(bmi_signature,"output/weights_bmi_signature.csv",row.names = F)
 
 #-------------------------------------------------------------------------------------
