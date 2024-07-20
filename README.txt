@@ -1,4 +1,4 @@
-This repository contains the essential codes to run the elastic net regression analysis as described in Lim et al. 2023
+This repository contains the essential codes to run the elastic net regression analysis as described in Lim et al. 2024
 
 1. System requirements
 
